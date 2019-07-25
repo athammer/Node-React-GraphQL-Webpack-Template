@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "jsx": "react",
+        "baseUrl": "./src",
+        "paths": {
+          "*": ["*"]
+        }
+    },
+    "include": ["./src/**/*"],
+    "exclude": ["./src/**/__tests__/**/*.js"],
+    “plugins”: [{“name”: “typescript-tslint-plugin”}]
+}
