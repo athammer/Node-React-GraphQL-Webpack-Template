@@ -1,14 +1,9 @@
 var awsParamStore = require('aws-param-store');
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser');
 var path = require('path');
-var compression = require('compression')
-app.use(compression())
 var exphbs = require('express-handlebars');
 var session = require('express-session');
-var cookieParser = require('cookie-parser')
-var helmet = require('helmet')
 let db = require('./db/db');
 var find = require('lodash/find');
 var logger = require('./logger');
@@ -25,19 +20,11 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 app.set('trust proxy', 1) // trust first proxy
 
-app.use(helmet())
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(bodyParser.json());
-app.use(cookieParser())
 
 app.get('/ping', function (req, res) { //for aws healthcheck
   res.send('dong!')
 })
 
-//var RedisStore = require('connect-redis')(session);
-// let myStore = new RedisStore(db.redisOptions)
 let SequelizeStore = require('connect-session-sequelize')(session.Store);
 let myStore = new SequelizeStore({
     db: db.sequalize

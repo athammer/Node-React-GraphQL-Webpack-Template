@@ -2,71 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Buy Pixels - Home</title>
-    <meta
-    name="description"
-    content="Buy and sell robux and limiteds from Roblox on a secure, fast, and easy market place. Exchange or buy pixels with real money through PayPal! "/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125014948-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-125014948-1');
-    </script>
+    <title>Home</title>
 </head>
-<link media="all" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 <link media="all" rel='stylesheet' href='/stylesheets/main.css' />
 
 <body>
-  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-          <div class="inner">
-              <h3 class="masthead-brand">Buy Pixels</h3>
-              <nav class="nav nav-masthead justify-content-center">
-                  <a class="nav-link active" href="/">Home</a>
-                  <a class="nav-link" href="/market">Market Place</a>
-                  {{#if name}}
-                    <a class="nav-link" href="/user/{{name}}">{{name}}</a>
-                  {{else}}
-                    <a class="nav-link" href="/authentication">Login</a>
-                  {{/if}}
-                  {{#if name}}
-                    <a class="nav-link" href="/logout">Logout</a>
-                  {{/if}}
-              </nav>
-          </div>
-      </header>
-      {{#if successResp}}
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-          <strong>Success</strong> {{successResp}}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      {{else if alertResp}}
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-          <strong>Alert:</strong> {{alertResp}}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      {{else if errorResp}}
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          <strong>Error:</strong> {{errorResp}}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      {{/if}}
-      <div id="home-mount-react" class="full"></div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <h1>Home</h1>
 </body>
 <script defer src="/javascripts/home.js" type="text/javascript"></script>
 </html>

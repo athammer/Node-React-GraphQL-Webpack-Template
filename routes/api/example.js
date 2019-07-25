@@ -1,9 +1,8 @@
 'use strict';
-
 let express = require('express');
 let router = express.Router();
 
-let userRouteHandlers = require('./users/handlers');
+let userRouteHandlers = require('./example/handlers');
 
 
 module.exports = router;
